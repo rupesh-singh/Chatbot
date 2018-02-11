@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/rupesh/Desktop/Web-django/mysite/myhome/model.tflearn"
+all_model_checkpoint_paths: "/home/rupesh/Desktop/Web-django/mysite/myhome/model.tflearn"

@@ -1,0 +1,188 @@
+<html>
+
+<head>
+
+<!-- EXTERNAL AJAX files -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+
+#chatdiv
+{
+	border-style: solid;
+	background-color: #eee;
+	width : 50%;
+	height : 500px;
+	margin-left:20%;
+}
+#myList
+{
+	overflow:scroll;
+	height: 450px;
+}
+
+#inputText
+{
+	width:80%;
+	height:30px;
+	margin-left:20px;
+	margin-bottom:0px;
+	border-style: dotted;
+}
+#sendButton
+{
+	width : 90px;
+	height: 30px;
+}
+#userResponse 
+{
+	font-size:110%;
+	background-color:#f3f3f3;
+	margin-top:5px;
+	margin-bottom:5px;
+	width:90%;
+	float :left;
+	padding-left: 10px;
+}
+#botResponse
+{
+	font-size:110%;
+	background-color:#f3f3f3;
+	float:right;
+	margin-top:5px;
+	margin-bottom:5px;
+	padding-right:20px;
+}
+
+</style>
+
+<script >
+
+var req1;
+function myFunction() {
+
+    var inputField=document.getElementById("inputText");
+	var message =inputField.value;
+	// alert(" "+message+" hi ");
+	inputField.value="";
+	    var node = document.createElement("P");
+    var textnode = document.createTextNode(message);
+    node.appendChild(textnode);
+	node.setAttribute("id","userResponse");
+    document.getElementById("myList").appendChild(node);
+	   
+	 
+	 req1=createrequest();
+	 if(req1!=null)
+	 {
+	 req1.open("GET","demo.php?b="+message,false);
+	 req1.onreadystatechange=changetext;
+	 req1.send(); 	
+	}
+	else
+	{
+	alert("null req");
+	}
+}
+ function changetext()
+{
+
+	if(req1.readyState==4)
+	{
+	  if(req1.status==200)
+	  {	 
+	   // cont.innerHTML=req1.responseText;
+	   
+	    // var node2 = document.createElement("P");
+		// var textnode2 = document.createTextNode(" response from chat bot ");
+		// node2.appendChild(textnode2);
+		// node2.setAttribute("id","botResponse");
+		// $("#myList").append(node2);
+		var node2=req1.responseText;
+		$("#myList").append(node2);
+	   
+	  }
+    }
+}
+
+
+
+$(document).on('submit','#Submit_form',function(e){ 
+    e.preventDefault();
+    var message1=$('#inputText').val();
+
+////////////////////////////////////////////////////////////////////////////////
+
+var inputField=document.getElementById("inputText");
+	var message =inputField.value;
+	// alert(" "+message+" hi ");
+	inputField.value="";
+	    var node = document.createElement("P");
+    var textnode = document.createTextNode(message);
+    node.appendChild(textnode);
+	node.setAttribute("id","userResponse");
+    document.getElementById("myList").appendChild(node);
+var inputField=document.getElementById("inputText");
+	var message =inputField.value;
+	// alert(" "+message+" hi ");
+	inputField.value="";
+	    var node = document.createElement("P");
+    var textnode = document.createTextNode(message);
+    node.appendChild(textnode);
+	node.setAttribute("id","userResponse");
+    document.getElementById("myList").appendChild(node);
+
+/////////////////////////////////////////////////////////////////////////
+  
+     $.ajax({
+     
+    url:"/myhome/",
+    type:"POST",
+    data:{"message1": message1,
+    "csrfmiddlewaretoken": $('input[name=csrfmiddlewaretoken]').val() },
+     
+    success: function(data, textStatus, jqXHR){
+        console.log('success');
+        $('#output').val(data);
+        var stringData = " <p id='botResponse'>" + data +" </p> ";
+
+
+        var node2=stringData;
+       // node2.setAttribute("id","botResponse");
+		$("#myList").append(node2);
+
+         
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+     alert(errorThrown);
+    console.log(errorThrown);
+    $('#output').val('Not success');
+    }
+    });
+  });
+  
+
+
+
+
+
+</script>
+
+</head>
+
+<body>
+	<!-- edhar se nikaaal-->
+	<div id="chatdiv">
+	<div id="myList">
+    
+    </div>
+	<form id='Submit_form' >{% csrf_token %}
+	<input id="inputText" name="message1" placeholder="type your query"> </input>
+	<input type='Submit' value="Submit"/>
+    </form>
+	</div>
+	<!-- edhar tak-->
+</body>
+
+</html>

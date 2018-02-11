@@ -1,0 +1,191 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "application_date",
+         "patterns": ["when do i apply?", "What is the due date for application?", "what is last date of the application?","what is starting date of the application?" ],
+         "responses": ["Application process will remain open at 04th of July to 14th of august", "from 4th July to 14th august"]
+        },
+        {"tag":"application_form",
+         "patterns":["how to avail admission form?","From where to have admission form?"],
+         "responses":["Application form for admission is available at the Somaiya website"]
+        },
+        {"tag": "office_hours",
+         "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
+         "responses": ["We're open every day from 9am-8pm", "Our hours are 9am-8pm every day"]
+        },
+        {"tag": "fees",
+         "patterns": ["what is the fee structure?”, “what is the amount of the fees?","how much is the fee?"],
+         "responses": ["Fee amount is INR 150000","Amount is 150000"]
+         },
+        {"tag": "payments_modes",
+         "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "what are the modes of payment?" ],
+         "responses": ["We accept VISA", "Mastercard and AMEX", "We accept most major credit cards"]
+        },
+        {
+          "tag": "application_fees",
+          "patterns":["what is the application fees?","amount of the application fees?","how much is the application fees?"],
+          "responses":["Application fee is the 5000","Amount is 5000"]   
+        },
+        { "tag":"couse_count",
+          "patterns": ["how many courses are offered?","what are the courses offered by university?"],
+          "responses":["There are total 7 courses are available in the university ”, “Total seven courses are offered by the university"]   
+        },
+        { "tag":"course_name",
+           "patterns":["what course are available in the university?”, “List the courses offered by the university" ],
+          "responses":["1.mechanical emgineering,2.computer emgineering,3.Information Technology,4.Electronics,5.Eclectronics and telecommunication,6.Biom-edical,7.bio-technology"]
+        },
+        {"tag":"course_duration",
+         "patterns":["How many years the course will take to complete?”, “how many semesters are there for course?”, “total number of semester needed to complete ?"],
+         "responses":["Engineering course usually takes about 4 years with total of 8 semester without any Drop in study."]
+        },
+        {
+              "tag":"eligibility_nationality",
+              "patterns":["Need admission”, “need admission in the computer engineering”, “need admission in the mechanical engineering","need admission in the electronics engineering","need admission in the EXTC","need admission in the IT engineering"],
+              "responses":["you should be first Indian or NRI passed HSC or 12th grade in science."]
+        },
+        {"tag":"admission_process",
+         "patterns":["what is admission procedure?”, “steps to follow for admission"],
+         "responses":["For admission person should follow the given steps, 1.Check eligibility criteria for Admission. 2.Apply at college by application with proper documentation. 3.Allocation of the students to the course according to the University rules 4.Verify the documents and pay fees to hold the seats in collage."]
+        },
+        {"tag":"admission_computerengineering",
+         "patterns":["what is admission procedure for computer engineering?”, “steps to follow for admission in computer engineering field"],
+         "responses":["For admission person should follow the given steps, 1.Check eligibility criteria for Admission. 2.Apply at college by application with proper documentation. 3.Allocation of the students to the computer engineering according to the University rules 4.Verify the documents and pay fees to hold the seats in Computer engineering."]
+        },
+        {"tag":"admission_mechanicalengineering",
+         "patterns":["what is admission procedure for Mechanical engineering?","steps to follow for admission in Mechanical engineering field"],
+         "responses":["For admission person should follow the given steps, 1.Check eligibility criteria for Admission. 2.Apply at college by application with proper documentation. 3.Allocation of the students to the computer engineering according to the University rules 4.Verify the documents and pay fees to hold the seats in Mechanical engineering."]
+        },
+        {"tag":"admission_itengineering",
+         "patterns":["what is admission procedure for IT engineering?","steps to follow for admission in Information technology field"],
+         "responses":["For admission person should follow the given steps, 1.Check eligibility criteria for Admission. 2.Apply at college by application with proper documentation. 3.Allocation of the students to the IT according to the University rules 4.Verify the documents and pay fees to hold the seats in IT engineering."]
+        },
+        {"tag":"admission_electronicalengineering",
+         "patterns":["what is admission procedure for Electronical engineering?","steps to follow for admission in Electronics field"],
+         "responses":["For admission person should follow the given steps, 1.Check eligibility criteria for Admission. 2.Apply at college by application with proper documentation. 3.Allocation of the students to the Electronical engineering according to the University rules 4.Verify the documents and pay fees to hold the seats in Electronical engineering."]
+        },
+        {"tag":"admission_electronical&telecomunicationengineering",
+         "patterns":["what is admission procedure for Electronical&Telecomunication engineering?","steps to follow for admission in Electronical&Telecomunication field"],
+         "responses":["For admission person should follow the given steps, 1.Check eligibility criteria for Admission. 2.Apply at college by application with proper documentation. 3.Allocation of the students to the Electronical&Telecomunication enginerring according to the University rules 4.Verify the documents and pay fees to hold the seats in Electronical&Telecomunication engineering."]
+        },
+        {
+            "tag":"Eligibility_criteria",
+               "patterns":["the criteria for admission?","what is the minimum criteria in HSC subjects?","Distinction needed for admission"],
+               "responses":["TO apply for admission student must have scored at least 50% in the subject Maths,Physics,Chemistry and over all"]
+        },
+        {
+               "tag":"Eligibility_board",
+               "patterns":["!2th from HSC board","12th from ICSC board","12th from CBSC board","To take admission what board of science is required to be completed?"],
+               "responses":["Student must be passed with Maharashtra state board of secondary and higher secondary education or it's equivalent examination."]
+               
+        },
+        { 
+               "tag":"backward class",
+               "patterns":["Admission for backward class"],
+               "responses":["backward class admission only eligible for Maharashtra student."]
+        },
+        {"tag":"OBC",
+         "patterns":["Admission for OBC quota","what is admission procedure for OBC?"],
+         "responses":["To have admission with OBC quota a student must satisfy following criteria :"]
+        },
+        {"tag":"SC",
+         "patterns":["Admission for SC quota","what is admission procedure for SC?"],
+         "responses":["To have admission with OBC quota a student must satisfy following criteria :"]
+        },
+        {"tag":"TFWS",
+         "patterns":["Admission through TFWS quota","what is admission procedure for TFWS quota?"],
+         "responses":["To have admission with OBC quota a student must satisfy following criteria :"]
+        },
+        {
+        "tag":"minority",
+         "patterns":["Admission through gujarati quota","what is admission procedure for OBC?"],
+         "responses":["To have admission with OBC quota a student must satisfy following criteria :"]
+        },
+    
+        {
+               "tag":"NRI",
+               "patterns":["Can out of India student apply for the admission?","i am NRI","I have completed my HSC out of India","I have completed my 12th out of India"],
+               "responses":["NRI or student passed 12th from out side of India are eligible for engineering in Somaiya college"]
+        },
+        {
+               "tag":"DTE_rule",
+               "patterns":["what are the rules and regulation of the admission?","where can i find the full procedure for admission?"],
+               "responses":["You can find it in official website of DTE"]
+        },
+        {
+             "tag":"Cancellation of admission",
+               "patterns":["How to cancel the admission?","Cancellation process for admission","Steps to cancel the admission"],
+               "responses":["Cancellation of admission will be as per DTE rules."]
+          
+        },
+        {"tag":"Requirement_documents",
+         "patterns":["List the documents required for admission.","what documents are needed for admission?"],
+         "responses":["Documents needed for admission are ,1.Certificate of INDIAN nationality.  ,2.certificate of passing & qualifying Examinations. ,3.Any extra credit given with the statement of marks. ,4.certificate of Date of Birth and Leaving certificate ,5.Domicile certificate ,6.Medical certificate of physical fitness."]
+            
+        },
+        {"tag":"Documents_OBC",
+         "patterns":["List the documents required for admission through OBC","what documents are needed for OBC student?"],
+         "responses":["Documents needed for admission are ,1.Certificate of INDIAN nationality.  ,2.certificate of passing & qualifying Examinations. ,3.Any extra credit given with the statement of marks. ,4.certificate of Date of Birth and Leaving certificate ,5.Domicile certificate ,6.Medical certificate of physical fitness., 7.Certificate of backward class "]
+            
+        },
+        {"tag":"Documents_SC",
+         "patterns":["List the documents required for admission through SC","what documents are needed for SC student?"],
+         "responses":["Documents needed for admission are ,1.Certificate of INDIAN nationality.  ,2.certificate of passing & qualifying Examinations. ,3.Any extra credit given with the statement of marks. ,4.certificate of Date of Birth and Leaving certificate ,5.Domicile certificate ,6.Medical certificate of physical fitness., 7.Certificate of backward class "]
+        },
+        {"tag":"Documents_TFWS",
+         "patterns":["List the documents required for admission in TFWS","what documents are needed for admission in TFWS?"],
+         "responses":["Documents needed for admission are ,1.Certificate of INDIAN nationality.  ,2.certificate of passing & qualifying Examinations. ,3.Any extra credit given with the statement of marks. ,4.certificate of Date of Birth and Leaving certificate ,5.Domicile certificate ,6.Medical certificate of physical fitness., 7.Certificate of Income"]
+        },
+        {"tag":"Documents_NRI",
+         "patterns":["List the documents required for admission through NRI seats","what documents are needed for NRI student?"],
+         "responses":["Documents needed for admission are ,1.Certificate of his/her nationality.  ,2.certificate of passing & qualifying Examinations. ,3.Any extra credit given with the statement of marks. ,4.certificate of Date of Birth and Leaving certificate  ,5.Medical certificate of physical fitness."]
+        },
+    
+        {"tag":"Alternate_DocumentOFDateOfBirth",
+         "patterns":["Don't have Date of Birth certificate”, “What is alternative for Date of birth certificate?"],
+         "responses":["Contact Collage OR DTE to know rule and regulation of the Documents."]
+        },
+        {"tag":"Lack_Domicile",
+         "patterns":["Don't have domicile certificate”, “What is alternative of domicile certificate?"],
+         "responses":["Contact Collage OR DTE to know rule and regulation of the Documents."]
+        },
+        {"tag":"Lack_LeavingCertificate",
+         "patterns":["Don't have Leaving Certificate”, “What is alternative of Leaving certificate?"],
+         "responses":["Contact Collage OR DTE to know rule and regulation of the Documents."]
+        },
+        {"tag":"Document_ChildrenOfGovernment",
+         "patterns":["Document required for Children of central Government","What document is needed for children of central government?"],
+         "responses":["Transfer order in the case of central government"]
+        },
+        {"tag":"Document_ChildrenOfArmedForces",
+         "patterns":["Documents required for Children of Armed Forces”, “What document is needed for children of central Armed Forces?"],
+         "responses":["Certificate of candidates claiming to be the children of armed forces personal transferred to Maharashtra state together with transfer order of Father"]
+            
+        },
+        {"tag":"Document_Minority",
+         "patterns":["Document required for through Minority Quota.","what document is needed for admission in Minority Quota?"],
+         "responses":["Certificate of Minority."]
+            
+        },   
+        {"tag":"Document_Handicapped",
+         "patterns":["Documents required for Handicapped person.","what document are needed for Handicapped person?"],
+         "responses":["Prescribed certificate of being physically handicapped."]
+            
+        },
+         {"tag":"Certificate_Extracredit",
+         "patterns":["Document required to have Extra credits”, “what documents are needed for Extra credits?"],
+         "responses":["Certificate of participation in Inter-institutional sports, Games ,Debates , Election and Drama Competition eligible for extra credits according to the DTE rule."]
+            
+        }
+   ]
+}
