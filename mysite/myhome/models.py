@@ -7,6 +7,7 @@ class intent(models.Model):
 	intent_name=models.CharField(max_length=250)
 
 
+
 class answers(models.Model):
 	intent_id=models.ForeignKey(intent, on_delete=models.CASCADE)
 	answer=models.CharField(max_length=2000)
