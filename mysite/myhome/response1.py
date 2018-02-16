@@ -15,7 +15,7 @@ import random
 
 # restore all of our data structures
 import pickle
-data = pickle.load( open( "/home/rupesh/Desktop/Web-django/mysite/myhome/training_data", "rb" ) )
+data = pickle.load( open( "/home/rupesh/Desktop/project/mysite/myhome/training_data", "rb" ) )
 words = data['words']
 classes = data['classes']
 train_x = data['train_x']
@@ -23,7 +23,7 @@ train_y = data['train_y']
 
 # import our chat-bot intents file
 import json
-with open('/home/rupesh/Desktop/Web-django/mysite/myhome/intents.json') as json_data:
+with open('/home/rupesh/Desktop/project/mysite/myhome/intents.json') as json_data:
     intents = json.load(json_data)
 
 
@@ -35,7 +35,7 @@ net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
 net = tflearn.regression(net)
 
 # Define model and setup tensorboard
-model = tflearn.DNN(net, tensorboard_dir='/home/rupesh/Desktop/Web-django/mysite/myhome/tflearn_logs')
+model = tflearn.DNN(net, tensorboard_dir='/home/rupesh/Desktop/project/mysite/myhome/tflearn_logs')
 
 
 def clean_up_sentence(sentence):
